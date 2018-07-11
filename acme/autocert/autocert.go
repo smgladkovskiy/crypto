@@ -270,6 +270,7 @@ func (m *Manager) GetCertificate(hello *tls.ClientHelloInfo) (*tls.Certificate, 
 }
 
 func supportsECDSA(hello *tls.ClientHelloInfo) bool {
+	return false
 	// The "signature_algorithms" extension, if present, limits the key exchange
 	// algorithms allowed by the cipher suites. See RFC 5246, section 7.4.1.4.1.
 	if hello.SignatureSchemes != nil {
